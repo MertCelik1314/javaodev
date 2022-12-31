@@ -3,7 +3,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 
-public class DisneyPlus {
+public class DisneyPlus {                   //Önceden oluşturduğumuz tüm özellikleri kendi altından birleştirip kullanan class.
     
     ArrayList<Asset> assets = new ArrayList<>();
     User credential=null;
@@ -13,8 +13,8 @@ public class DisneyPlus {
         this.assets=assets;
     }
 
-    public void login(User user){
-        String userName = user.userName, uNameIn;
+    public void login(User user){                    //Giriş yapmaya çalışan kullanıcı deneme yaptığı hesabın bilgilerini girer. Eğer bilgiler doğru ise sisteme girişi sağlanır
+        String userName = user.userName, uNameIn;   //Ve sistem üzerinde işlem yapmasına izin verilir.
         String password = user.password, passwdIn;
 
         Scanner sc = new Scanner(System.in);
@@ -41,28 +41,28 @@ public class DisneyPlus {
         sc.close();
     }
 
-    public void addMovie(Movie mov1){
+    public void addMovie(Movie mov1){       //Kullanıcı girişi başarılı olduğu sürece sisteme film türünde objeler ekler.
         if(!isLogin)
         return;
 
         assets.add(mov1);
     }
 
-    public void addBook(Book book1){
+    public void addBook(Book book1){        //Kullanıcı girişi başarılı olduğu sürece sisteme kitap türünde objeler ekler.
         if(!isLogin)
         return;
 
         assets.add(book1);
     }
 
-    public void addAsset(Asset asset1){
+    public void addAsset(Asset asset1){     //Kullanıcı girişi başarılı olduğu sürece sisteme türü fark etmeksizin bir obje ekler.
         if(!isLogin)
         return;
 
         assets.add(asset1);
     }
 
-    boolean removeMovie(int movieId){
+    boolean removeMovie(int movieId){       //Silinmek istenen film objesi sistemde varsa siler ve 'true' döndürür. Sistemde aranan obje yoksa 'false' döndürür.
         int counter=0;
         for( Asset a:assets){
 
@@ -75,7 +75,7 @@ public class DisneyPlus {
         return false;
     }
 
-    boolean removeBook(int bookId){
+    boolean removeBook(int bookId){        //Silinmek istenen kitap objesi sistemde varsa siler ve 'true' döndürür. Sistemde aranan obje yoksa 'false' döndürür.
         int counter = 0;
         for(Asset a: assets){
 
@@ -88,7 +88,7 @@ public class DisneyPlus {
         return false;
     }
 
-    public void oldestActor(Movie m1){
+    public void oldestActor(Movie m1){          //Parametre olarak verilen film objesinin tüm oyuncularını kontrol eder ve yaşı en büyük olan oyunucunun bilgilerini ekrana basar.
         Consumer oldest = m1.actors.get(0);
 
         for(Consumer a: m1.actors){
@@ -102,7 +102,7 @@ public class DisneyPlus {
         System.out.println("Birth year is :" + oldest.birth_year);
     }
 
-    public void lowestAvgScoreMovie(ArrayList<Asset> assets){
+    public void lowestAvgScoreMovie(ArrayList<Asset> assets){       //Sistemin içindeki tüm film objelerini gezer ve içlerinde ortalama puanı en düşük olanı ekrana basar.
         double lowest=100;
         int counter=0;
         int lowestcnt=0;

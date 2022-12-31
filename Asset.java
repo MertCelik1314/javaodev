@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 abstract class Asset {
 
-    int id;
-    String name;
+    int id;                           //Kurduğumuz sistemin en önemli parçalarından birisi. Ekleyeceğimiz objeleri bu class'tan türeterek onlar üzerinde işlem yapmamıza olanak
+    String name;                      //sağlar. Kullanılan methotlar çağırılacakları class'lara göre özelleştirilebilir(override).
     int release_year;
     Category category;
     int price;

@@ -10,8 +10,8 @@ public class Book extends Asset {
         this.writer=writer;
         this.numOfPages=numOfPages;
     }
-    
-    public void setWriter(Consumer writer){
+                                                        //Bu class'ta kullanılan tüm değişkenler ve methotlar 'Asset' class'ından türetilmiş veya geliştirilmiştir.
+    public void setWriter(Consumer writer){             
         this.writer=writer;
     }
 

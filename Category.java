@@ -1,6 +1,6 @@
 public class Category {
     
-    int id;
+    int id;                         //Sisteme ekleyeceğimiz objeleri daha rahat sınıflandırmak ve işlem yapmayı kolaylaştırmak için kullanılan class.
     String categoryCode;
     String categoryName;
 

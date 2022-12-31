@@ -1,6 +1,6 @@
 public class Consumer{
 
-    int id;
+    int id;                       //Oyuncu, yazar, kullanıcı benzeri tüm karakterler bu class üzerinden türetilir.
     int birth_year;
     int salary;
     String firstName;
